@@ -50,8 +50,8 @@ O banco SQLite (`SistemaERPOnlineForcaDeVendasAPI.db`) é criado na raiz do proj
 
 ## Execução Inicial de Endpoints (Postman)
 
-**(Registrar usuário)**
-Enviar POST / Usuario: **https://localhost:7092/api/auth/registro**, selecionar Guia Body e enviar RAW e enviar o seguinte JSON 
+**(1 -Registrar usuário)**
+- Enviar POST / Usuario: **https://localhost:7092/api/auth/registro**, selecionar Guia Body e enviar RAW e enviar o seguinte JSON 
 
    ```json
 	{ 
@@ -63,8 +63,8 @@ Enviar POST / Usuario: **https://localhost:7092/api/auth/registro**, selecionar 
 	}
    ```
 
-**(Fazer Login)**
-Enviar POST / Usuario: **https://localhost:7092/api/auth/login**, selecionar Guia Body e enviar RAW e enviar o seguinte JSON 
+**(2 - Fazer Login e Copiar o Token Postman)**
+- Enviar POST / Usuario: **https://localhost:7092/api/auth/login**, selecionar Guia Body e enviar RAW e enviar o seguinte JSON 
 
    ```json
 	{
@@ -72,8 +72,9 @@ Enviar POST / Usuario: **https://localhost:7092/api/auth/login**, selecionar Gui
 		"senha": "123456"
 	}
    ```
-
-3 - Clique na Aba do Arquivo ou para todos os arquivos, na pasta **Authorizathion** no Postman e cole **(Token)** (sem "Bearer") e salve 
+   
+**(3 - Fazer Login e Colar o Token Postman)**
+- Clique na Aba do Arquivo ou para todos os arquivos, na pasta **Authorizathion** no Postman e cole **(Token)** (sem "Bearer") e salve 
 
 ```bash
 ...
@@ -86,8 +87,7 @@ Enviar POST / Usuario: **https://localhost:7092/api/auth/login**, selecionar Gui
 
 ```
 
-##Exemplo de EndPoint Criar produtos:
-
+**(4 -Teste Autenticação)**
 Enviar POST / Produto: https://localhost:7092/api/Produtos, selecionar Guia Body e enviar RAW e enviar o seguinte JSON 
 
    ```json
@@ -104,19 +104,15 @@ Enviar POST / Produto: https://localhost:7092/api/Produtos, selecionar Guia Body
 
 ###Health
 
-5 - Health Checar o servidor – Estado da API e da base de dados (útil para monitorização e orquestração).
+Health Checa o servidor, verifica o estado da API e do banco de dados (útil para monitorização e orquestração).
 GET http://localhost:7092/health 
 
-
 ## Testes
-
 ```bash
         dotnet test SistemaERPOnlineForcaDeVendasAPI.Testes/SistemaERPOnlineForcaDeVendasAPI.Testes.csproj
 ```
 
 Os testes cobrem a camada **Aplicacao** (serviços de Projeto e Tarefa), com mocks dos repositórios.
-
-
 
 ## Configuração
 
