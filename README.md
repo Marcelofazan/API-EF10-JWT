@@ -36,7 +36,7 @@ OBS: Certificar em Definir o Projeto Padrão como (SistemaERPOnlineForcaDeVendas
 
 ```bash
 ...
-	Update-Database -Project "SistemaERPOnlineForcaDeVendasAPI.InfraEstrutura" -StartupProject "SistemaERPOnlineForcaDeVendasAPI.WebAPI"
+	Update-Database -Project "InfraEstrutura" -StartupProject "SistemaERPOnlineForcaDeVendasAPI.WebAPI"
 ...
 
 ```
