@@ -76,17 +76,6 @@ O banco SQLite (`SistemaERPOnlineForcaDeVendasAPI.db`) é criado na raiz do proj
 **(3 - Fazer Login e Colar o Token Postman)**
 - Clique na Aba do Arquivo ou para todos os arquivos, na pasta **Authorizathion** no Postman e cole **(Token)** (sem "Bearer") e salve 
 
-```bash
-...
-	Metodo: POST /api/auth/registro            Função: Registo de novo admin                JWT: Não 
-	Metodo: POST /api/auth/login               Função: Login e obter token JWT              JWT: Não
-	Metodo: GET /health                        Função: Health check (API + base de dados)   JWT: Não
-	Metodo: GET/POST /api/Produtos             Função: Listar / Criar produtos              JWT: Sim
-	Metodo: GET/PUT/DELETE /api/Produtos/{id}  Função: Obter / Atualizar / Excluir produto  JWT: Sim
-...
-
-```
-
 **(4 -Teste Autenticação)**
 Enviar POST / Produto: https://localhost:7092/api/Produtos, selecionar Guia Body e enviar RAW e enviar o seguinte JSON 
 
@@ -107,7 +96,20 @@ Enviar POST / Produto: https://localhost:7092/api/Produtos, selecionar Guia Body
 Health Checa o servidor, verifica o estado da API e do banco de dados (útil para monitorização e orquestração).
 GET http://localhost:7092/health 
 
-## Testes
+
+### Rotas dos métodos e funções
+```bash
+...
+	Metodo: POST /api/auth/registro            Função: Registo de novo admin                JWT: Não 
+	Metodo: POST /api/auth/login               Função: Login e obter token JWT              JWT: Não
+	Metodo: GET /health                        Função: Health check (API + base de dados)   JWT: Não
+	Metodo: GET/POST /api/Produtos             Função: Listar / Criar produtos              JWT: Sim
+	Metodo: GET/PUT/DELETE /api/Produtos/{id}  Função: Obter / Atualizar / Excluir produto  JWT: Sim
+...
+
+```
+
+## Executar Testes Unitários (Developer PowerShell)
 ```bash
         dotnet test SistemaERPOnlineForcaDeVendasAPI.Testes/SistemaERPOnlineForcaDeVendasAPI.Testes.csproj
 ```
@@ -115,7 +117,6 @@ GET http://localhost:7092/health
 Os testes cobrem a camada **Aplicacao** (serviços de Projeto e Tarefa), com mocks dos repositórios.
 
 ## Configuração
-
 - **Banco:** SQLite, arquivo `SistemaERPOnlineForcaDeVendasAPI.db` na raiz do projeto (não versionado). Connection string em `appsettings.json` (`ConnectionStrings:DefaultConnection`).
 - **JWT:** Em `appsettings.json`, substitua `Jwt:Key` por uma chave segura com **mínimo 32 caracteres** (ou defina a variável de ambiente `Jwt__Key`). Em produção use sempre variáveis de ambiente ou User Secrets.
 
