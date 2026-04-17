@@ -11,9 +11,10 @@ Exemplo de criação de WebAPI com Clean Arquitetura com autenticação e autori
 
 ## Requisitos e Detalhe do uso de EntityFrameworkCore 10
 
-Ferramentas > Gerenciador de Pacotes NuGet > Console do Gerenciador de Pacotes no Visual Studio 
+Abra Ferramentas > Gerenciador de Pacotes NuGet > Console do Gerenciador de Pacotes no Visual Studio  (Necessário para Atualizar o Depurador com a solução 
 
 Certificar que o Projeto Padrão é: SistemaERPOnlineForcaDeVendasAPI.WebAPI
+Certificar que o nome da pasta raiz seja (SistemaERPOnlineForcaDeVendasAPI), não pode haver -main
 
 * Instalar pacotes necessários (Obrigatório)
 ```bash
@@ -27,7 +28,7 @@ Certificar que o Projeto Padrão é: SistemaERPOnlineForcaDeVendasAPI.WebAPI
 
 ```bash
 ...
-	Add-Migration InitialCreate -Project "SistemaERPOnlineForcaDeVendasAPI.InfraEstrutura" -StartupProject "SistemaERPOnlineForcaDeVendasAPI.WebAPI"
+  Add-Migration InitialCreate -Project "InfraEstrutura" -StartupProject "SistemaERPOnlineForcaDeVendasAPI.WebAPI"
 ...
 
 ```
