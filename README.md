@@ -91,7 +91,7 @@ Enviar POST / Produto: https://localhost:7092/api/Produtos, selecionar Guia Body
 	}
    ```
 
-###Health
+### Health
 
 Health Checa o servidor, verifica o estado da API e do banco de dados (útil para monitorização e orquestração).
 GET http://localhost:7092/health 
