@@ -1,8 +1,8 @@
-# Bash
+## Bash
 
 Comandos para rodar no Bash do Linux 
 
-## Requesitos Necessários e Detalhes para Bash 
+### Requesitos Necessários e Detalhes para Bash 
 
 ```bash  
 	cd /home/vboxuser/Projetos/API-EF10-JWT-main/SistemaERPOnlineForcaDeVendasAPI.WebAPI
@@ -15,7 +15,7 @@ Comandos para rodar no Bash do Linux
 ```
 
 
-## Efetuar Migrations pelo Bash 
+### Efetuar Migrations pelo Bash 
 
 ```bash 
 	cd /home/vboxuser/Projetos/API-EF10-JWT-main/
@@ -26,7 +26,7 @@ Comandos para rodar no Bash do Linux
 ```
 
 
-## Executar o Projeto 
+### Executar o Projeto 
 
 ```bash 
 	cd /home/vboxuser/Projetos/API-EF10-JWT-main/SistemaERPOnlineForcaDeVendasAPI.WebAPI
@@ -34,7 +34,7 @@ Comandos para rodar no Bash do Linux
 	dotnet run 
 ```
 
-# Erro de SSL não criptografado no Linux (SSL_ERROR_RX_RECORD_TOO_LONG) alterar:
+### Erro de SSL não criptografado no Linux (SSL_ERROR_RX_RECORD_TOO_LONG) alterar:
 
 ```bash
 	https:// por http://
