@@ -24,7 +24,7 @@ Comandos para rodar no Bash do Linux
 
 	dotnet ef migrations add InitialCreate --project InfraEstrutura --startup-project SistemaERPOnlineForcaDeVendasAPI.WebAPI
 ```
-
+O Migrations é criada na pasta InfraEstrutura. 
 
 ### Executar o Projeto 
 
